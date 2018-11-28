@@ -56,6 +56,10 @@ public class SupportControllerTest {
         Assert.assertEquals(HttpStatus.OK, resp.getStatusCode());
         Assert.assertTrue(resp.getBody().isPresent());
         Assert.assertEquals(TestUtils.support0.getIsin(), ((Map) resp.getBody().get()).get("isin"));
+
+        resp = template.getForEntity("http://localhost:8080/support/" + "another Isin", Optional.class);
+
+        Assert.assertEquals(HttpStatus.NO_CONTENT, resp.getStatusCode());
     }
 
 

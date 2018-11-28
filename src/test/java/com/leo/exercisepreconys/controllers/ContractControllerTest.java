@@ -59,8 +59,7 @@ public class ContractControllerTest {
 
         resp = template.getForEntity("http://localhost:8080/contract/" + TestUtils.contract1.getName(), Optional.class);
 
-        Assert.assertEquals(HttpStatus.OK, resp.getStatusCode());
-        Assert.assertFalse(resp.getBody().isPresent());
+        Assert.assertEquals(HttpStatus.NO_CONTENT, resp.getStatusCode());
     }
 
 
