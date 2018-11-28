@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "4aa9199e-8f0f-4ae4-b4e8-03c124bba588",
+		"name": "exercise-preconys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get supports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/support",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search support by ISIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/support/abcd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"support",
+						"abcd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search support by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/support/name/support 0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"support",
+						"name",
+						"support 0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post support",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"support 0\",\n    \"isin\": \"1234\",\n    \"establishment\": \"establishment 0\",\n    \"value\": 10000,\n    \"creationDate\": \"2018-11-27T19:40:55.064+0000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/support",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post support 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"support 1\",\n    \"isin\": \"abcd\",\n    \"establishment\": \"establishment 1\",\n    \"value\": 20000,\n    \"creationDate\": \"2018-11-27T19:40:55.064+0000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/support",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post support 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"support 2\",\n    \"isin\": \"azerty\",\n    \"establishment\": \"establishment 2\",\n    \"value\": 30000,\n    \"creationDate\": \"2018-11-27T07:42:37.087+0000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/support",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post support 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"support 3\",\n    \"isin\": \"147258\",\n    \"establishment\": \"establishment 3\",\n    \"value\": 30000,\n    \"creationDate\": \"2018-11-27T07:42:37.087+0000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/support",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post support malformed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"support 3\",\n    \"isin\": \"147258\",\n    \"value\": 30000,\n    \"creationDate\": \"2018-11-27T07:42:37.087+0000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/support",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post support empty",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/support",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete support",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/support/1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"support",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get contracts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/contract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search contract by Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/contract/contract 0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contract",
+						"contract 0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search contract by isin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/contract/isin/1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contract",
+						"isin",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post contract",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"contract 0\",\n    \"establishment\": \"establishment 0\",\n    \"currency\": \"EURO\",\n    \"amount\": 1000,\n    \"openingDate\": \"2018-11-27T21:01:41.416+0000\",\n    \"clientMail\": \"client 0\",\n    \"supportParts\": {\n        \"1234\": 0.9,\n        \"test\":1.0\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/contract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post contract 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"contract 1\",\n    \"establishment\": \"establishment 1\",\n    \"currency\": \"DOLLAR\",\n    \"amount\": 2000,\n    \"openingDate\": \"2018-11-27T21:01:41.416+0000\",\n    \"clientMail\": \"client 1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/contract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post contract malformed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"contract 1\",\n    \"establishment\": \"establishment 1\",\n    \"currency\": \"DOLLAR\",\n    \"amount\": -200,\n    \"openingDate\": \"2018-11-27T21:01:41.416+0000\",\n    \"clientMail\": \"client 1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/contract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete contract",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/contract/contract 0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contract",
+						"contract 0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create association",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"contract 0\",\n    \"establishment\": \"establishment 0\",\n    \"currency\": \"EURO\",\n    \"amount\": 1000,\n    \"openingDate\": \"2018-11-27T21:01:41.416+0000\",\n    \"clientMail\": \"client 0\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/association/contract 0/1234/0.8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"association",
+						"contract 0",
+						"1234",
+						"0.8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove association",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"contract 0\",\n    \"establishment\": \"establishment 0\",\n    \"currency\": \"EURO\",\n    \"amount\": 1000,\n    \"openingDate\": \"2018-11-27T21:01:41.416+0000\",\n    \"clientMail\": \"client 0\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/association/contract 0/1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"association",
+						"contract 0",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
